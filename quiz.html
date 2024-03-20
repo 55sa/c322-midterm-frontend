@@ -34,7 +34,7 @@
 
         async function loadQuiz() {
             try {
-                const response = await fetch(`http://localhost:8090/quizzes/${quizId}`);
+                const response = await fetch(`https://midterm-4cbz.onrender.com/quizzes/${quizId}`);
                 quiz = await response.json();
                 questions.push(...quiz.questions);
                 populateQuestion();
@@ -47,7 +47,7 @@
             const question = questions[currentQuestionIndex];
             if (question) {
                 document.getElementById('question-title').textContent = `Question ${currentQuestionIndex + 1}`;
-                document.getElementById('question-image').src = `http://localhost:8090/questions/${question.id}/image`;
+                document.getElementById('question-image').src = `https://midterm-4cbz.onrender.com/questions/${question.id}/image`;
                 document.getElementById('question-description').textContent = question.description;
 
                 const choicesContainer = document.getElementById('choices-container');

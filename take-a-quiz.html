@@ -25,7 +25,7 @@
   </div>
 
   <script>
-    const quizzesEndpoint = 'http://localhost:8090/quizzes';
+    const quizzesEndpoint = 'https://midterm-4cbz.onrender.com/quizzes';
 
     async function loadQuizzes() {
       try {
@@ -55,7 +55,7 @@
     }
 
     function startQuiz(quizId) {
-      // You can add logic here to start the selected quiz
+      
       window.location.href = `quiz.html?id=${quizId}`;
     }
 
